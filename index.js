@@ -19,8 +19,28 @@ function div_hide() {
     document.getElementById('popupContact').style.display = "none";
 }
 
+function divHideProjects() {
+    let newProjects = document.getElementsByClassName('grid-list-1')[0];
+    newProjects.style.display = "none";
+}
+
+function divShowProjects() {
+    let newProjects = document.getElementsByClassName('grid-list-1')[0];
+    newProjects.style.display = "block";
+}
+
+function divHideBlogs() {
+    let newBlogs = document.getElementsByClassName('grid-list-2')[0];
+    newBlogs.style.display = "none";
+}
+
+function divShowBlogs() {
+    let newBlogs = document.getElementsByClassName('grid-list-2')[0];
+    newBlogs.style.display = "block";
+}
+
 function moreOpacity() {
-    let image = document.getElementById("scroll-image")
+    let image = document.getElementById("scroll-image");
     image.style.opacity = "50%";
 }
 
@@ -63,18 +83,18 @@ repoButton.addEventListener('click', function() {
     gitRepoRedirect();
 })
 
-projectsWindow.addEventListener('mouseover', function(e) {
-    e.target.style.gridRow = "2 / 7"
+projectsWindow.addEventListener('mouseover', function() {
+    divShowProjects();
 })
 
-blogWindow.addEventListener('mouseover', function(e) {
-    e.target.style.gridRow = "2 / 7"
+blogWindow.addEventListener('mouseover', function() {
+    divShowBlogs();
 })
 
-projectsWindow.addEventListener('mouseout', function(e) {
-    e.target.style.gridRow = "5 / 7"
-})
+// projectsWindow.addEventListener('mouseout', function(e) {
+//     divHideProjects();
+// })
 
-blog.addEventListener('mouseout', function(e) {
-    e.target.style.gridRow = "5 / 7"
-})
+// blog.addEventListener('mouseout', function(e) {
+//     e.target.style.gridRow = "6 / 7"
+// })
