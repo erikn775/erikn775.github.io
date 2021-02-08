@@ -1,14 +1,18 @@
-const conButton = document.getElementById("contact")
-const form = document.getElementById("popupContact")
-const xButton = document.getElementById("close")
-const about = document.getElementById("about")
-const gitButton = document.getElementsByClassName("fa fa-github")[0]
-const linkedIn = document.getElementsByClassName("fa fa-linkedin")[0]
-const repoButton = document.getElementById("here_link")
-const projectsWindow = document.getElementsByClassName("grid-item-1")[0]
-const blogWindow = document.getElementsByClassName("grid-item-2")[0]
-const projects = document.getElementsByClassName("grid-item-1")[0]
-const blog = document.getElementsByClassName("grid-item-2")[0]
+const conButton = document.getElementById("contact");
+const form = document.getElementById("popupContact");
+const xButton = document.getElementById("close");
+const about = document.getElementById("about");
+const gitButton = document.getElementsByClassName("fa fa-github")[0];
+const linkedIn = document.getElementsByClassName("fa fa-linkedin")[0];
+const repoButton = document.getElementById("here_link");
+const projectsWindow = document.getElementsByClassName("grid-item-1")[0];
+const blogWindow = document.getElementsByClassName("grid-item-2")[0];
+const projects = document.getElementsByClassName("grid-item-1")[0];
+const blog = document.getElementsByClassName("grid-item-2")[0];
+const newBlogs = document.getElementsByClassName('grid-list-2')[0];
+const newProjects = document.getElementsByClassName('grid-list-1')[0];
+const projectsHeader = document.getElementById("projects-header")
+const blogHeader = document.getElementById("blogs-header")
 
 href="https://github.com/erikn775/my_website"
 function div_show() {
@@ -20,12 +24,10 @@ function div_hide() {
 }
 
 function divHideProjects() {
-    let newProjects = document.getElementsByClassName('grid-list-1')[0];
     newProjects.style.display = "none";
 }
 
 function divShowProjects() {
-    let newProjects = document.getElementsByClassName('grid-list-1')[0];
     newProjects.style.display = "block";
 }
 
@@ -35,8 +37,8 @@ function divHideBlogs() {
 }
 
 function divShowBlogs() {
-    let newBlogs = document.getElementsByClassName('grid-list-2')[0];
     newBlogs.style.display = "block";
+    
 }
 
 function moreOpacity() {
@@ -85,16 +87,18 @@ repoButton.addEventListener('click', function() {
 
 projectsWindow.addEventListener('mouseover', function() {
     divShowProjects();
+
 })
 
 blogWindow.addEventListener('mouseover', function() {
     divShowBlogs();
 })
 
-// projectsWindow.addEventListener('mouseout', function(e) {
-//     divHideProjects();
-// })
 
-// blog.addEventListener('mouseout', function(e) {
-//     e.target.style.gridRow = "6 / 7"
-// })
+projectsHeader.addEventListener('click', function() {
+    divHideProjects();
+})
+
+blogHeader.addEventListener('click', function() {
+    divHideBlogs();
+})
