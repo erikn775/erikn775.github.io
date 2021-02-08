@@ -13,6 +13,8 @@ const newBlogs = document.getElementsByClassName('grid-list-2')[0];
 const newProjects = document.getElementsByClassName('grid-list-1')[0];
 const projectsHeader = document.getElementById("projects-header")
 const blogHeader = document.getElementById("blogs-header")
+const blog1 = document.getElementById("button-6")
+const blog2 = document.getElementById("button-7")
 
 href="https://github.com/erikn775/my_website"
 function div_show() {
@@ -63,6 +65,22 @@ function gitRepoRedirect() {
     location.replace("https://github.com/erikn775/my_website")
 }
 
+function paramsHash() {
+    location.replace("https://medium.com/@erikn775/what-is-params-in-sinatra-rails-fd2b67d5ae7e")
+}
+
+function eachValidator() {
+    location.replace("https://medium.com/@erikn775/rails-eachvalidator-7ce96abe2c5")
+}
+
+blog1.addEventListener('click', function() {
+    paramsHash();
+})
+
+blog2.addEventListener('click', function() {
+
+})
+
 conButton.addEventListener('click', function() {
     div_show();
     moreOpacity();
@@ -102,3 +120,4 @@ projectsHeader.addEventListener('click', function() {
 blogHeader.addEventListener('click', function() {
     divHideBlogs();
 })
+
