@@ -78,7 +78,7 @@ blog1.addEventListener('click', function() {
 })
 
 blog2.addEventListener('click', function() {
-
+    eachValidator();
 })
 
 conButton.addEventListener('click', function() {
