@@ -54,7 +54,7 @@ function lessOpacity() {
 }
 
 function gitRedirect() {
-    location.replace("https://github.com/erikn775")
+    location.replace("https://github.com/erikn775?tab=projects")
 }
 
 function linkedInRedirect() {
@@ -73,9 +73,9 @@ function eachValidator() {
     location.replace("https://medium.com/@erikn775/rails-eachvalidator-7ce96abe2c5")
 }
 
-blog1.addEventListener('click', function() {
-    paramsHash();
-})
+// blog1.addEventListener('click', function() {
+//     paramsHash();
+// })
 
 blog2.addEventListener('click', function() {
     eachValidator();
